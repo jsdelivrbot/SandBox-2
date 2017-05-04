@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions';
 import { Link } from 'react-router-dom';
+import { fetchPosts } from '../actions';
 
 class PostsIndex extends Component {
   componentDidMount() {
@@ -12,10 +12,9 @@ class PostsIndex extends Component {
   renderPosts() {
     return _.map(this.props.posts, post => {
       return (
-        <li key={post.id} className="list-group-item">
+        <li className="list-group-item" key={post.id}>
           <Link to={`/posts/${post.id}`}>
             {post.title}
-            
           </Link>
         </li>
       );
