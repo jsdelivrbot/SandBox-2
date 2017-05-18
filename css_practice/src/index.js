@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 import App from './components/App'
-import IndexPage from './components/indexPage'
-import PageOne from './components/pageOne'
-import PageTwo from './components/pageTwo'
+import IndexPage from './components/IndexPage'
+import SectionOne from './components/SectionOne'
+import SectionTwo from './components/SectionTwo'
 import './index.css'
 
 const Root = () => {
@@ -13,8 +13,8 @@ const Root = () => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={IndexPage} />
-          <Route path="pages/1" component={PageOne} />
-          <Route path="pages/2" component={PageTwo} />
+          <Route path="sections/1" component={SectionOne} />
+          <Route path="sections/2" component={SectionTwo} />
         </Route>
       </Router>
   )

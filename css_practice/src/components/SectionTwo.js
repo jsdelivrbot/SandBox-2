@@ -1,14 +1,14 @@
 import React from 'react';
 
-class PageOne extends React.Component {
+class SectionTwo extends React.Component {
 
   render() {
     return (
       <div>
-        Page One
+        Section Two
       </div>
     );
   }
 }
 
-export default PageOne;
+export default SectionTwo;

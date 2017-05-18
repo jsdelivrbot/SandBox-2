@@ -1,6 +1,7 @@
-import React from 'react';
-import PageOne from './pageOne'
-import PageTwo from './pageTwo'
+import React from 'react'
+import SectionOne from './SectionOne'
+import SectionTwo from './SectionTwo'
+import { Link } from 'react-router'
 
 class IndexPage extends React.Component {
 
@@ -8,8 +9,12 @@ class IndexPage extends React.Component {
     return (
       <div>
         Index Page
-        <PageOne />
-        <PageTwo />
+        <div>
+          <Link to="/sections/1">Section One</Link>
+        </div>
+        <div>
+          <Link to="/sections/2">Section Two</Link>
+        </div>
       </div>
     );
   }
