@@ -1,10 +1,7 @@
 import React from 'react'
-import SectionOne from './SectionOne'
-import SectionTwo from './SectionTwo'
 import { Link } from 'react-router'
 
 class IndexPage extends React.Component {
-
   render() {
     return (
       <div>
@@ -16,8 +13,8 @@ class IndexPage extends React.Component {
           <Link to="/sections/2">Section Two</Link>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default IndexPage;
+export default IndexPage

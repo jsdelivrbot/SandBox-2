@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import App from './components/App'
 import IndexPage from './components/IndexPage'
@@ -10,7 +10,7 @@ import './index.css'
 
 const Root = () => {
   return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={IndexPage} />
           <Route path="sections/1" component={SectionOne} />
