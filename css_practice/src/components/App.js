@@ -2,6 +2,8 @@ import React from 'react'
 
 import AppHeader from './AppHeader'
 
+import './style.css'
+
 export default ({ children }) => {
   return (
     <div className="container">
