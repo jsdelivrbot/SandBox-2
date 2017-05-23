@@ -6,6 +6,7 @@ import Toggle from './Toggle'
 
 test('has toggle--off class applied by default', () => {
   // create a renderToggle function and call that without arguments to get a wrapper with the defaults
+  const wrapper = renderToggle()
   // expect the first child to have the class toggle--off (tip: create rootHasClass(wrapper, className) function)
 })
 
@@ -25,5 +26,14 @@ test('invokes the onToggle prop when clicked', () => {
 
 // create a renderToggle function that accepts some props and applies those to a render of the <Toggle /> component
 //   you should also provide defaults for any required props
+function renderToggle(props = {}) {
+  return render(
+    <Toggle
+      onToggle={() => {}}
+      children="Toggle Me"
+      {...props}
+    />
+  )
+}
 // create a mountToggle function that does basically the same thing except with mount
 // Also a clickButton(wrapper) function would be handy to create here as well as both tests will need to do that.
