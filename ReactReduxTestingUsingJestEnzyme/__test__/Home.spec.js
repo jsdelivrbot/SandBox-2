@@ -24,7 +24,7 @@ describe('>>>H O M E --- Shallow Render REACT COMPONENTS',()=>{
 
     beforeEach(()=>{
         wrapper = shallow(<Home output={output}/>)
-        
+
     })
 
     it('+++ render the DUMB component', () => {
@@ -66,7 +66,7 @@ describe('>>>H O M E --- REACT-REDUX (Shallow + passing the {store} directly)',(
 
     beforeEach(()=>{
         store = mockStore(initialState)
-        container = shallow(<ConnectedHome store={store} /> )  
+        container = shallow(<ConnectedHome store={store} /> )
     })
 
     it('+++ render the connected(SMART) component', () => {

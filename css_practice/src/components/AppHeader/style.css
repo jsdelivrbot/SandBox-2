@@ -7,7 +7,7 @@
 }
 
   .section {
-    width: 40%;
+    flex: 1;
     text-align: center;
   }
 

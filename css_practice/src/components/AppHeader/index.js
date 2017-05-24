@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+import RightHeaderGroup from '../RightHeaderGroup'
 import './style.css'
 
 class AppHeader extends Component {
@@ -8,10 +9,12 @@ class AppHeader extends Component {
     return (
       <div className="header-container">
         <div className="left section">
-          left
+          <div className="home">
+            <Link to="/">Home</Link>
+          </div>
         </div>
         <div className="right section">
-          right
+          <RightHeaderGroup />
         </div>
       </div>
     )
