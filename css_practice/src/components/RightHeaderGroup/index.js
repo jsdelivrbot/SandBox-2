@@ -5,24 +5,24 @@ import './style.css'
 
 const RightHeaderGroup = () => {
   return (
-    <div className="right-button-group">
+    <div className="zzz right-button-group">
       <a
-        className="header-button linkedin"
+        className="zzz header-button linkedin"
         href="https://www.linkedin.com/in/tom-ogasawara"
       />
       <a
-        className="header-button github"
+        className="zzz header-button github"
         href="https://www.github.com/tom-ogasawara"
       />
       <a
-        className="header-button portfolio"
+        className="zzz header-button portfolio"
         href="https://www.tom-ogasawara.com"
       />
       <a
-        className="header-button email"
+        className="zzz header-button email"
         href="mailto:tom.ogasawara@gmail.com"
       />
-      <Link className="header-button resume" to="/resume" />
+      <Link className="zzz header-button resume" to="/resume" />
     </div>
   )
 }

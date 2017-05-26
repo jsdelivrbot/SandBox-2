@@ -7,13 +7,13 @@ import './style.css'
 class AppHeader extends Component {
   render() {
     return (
-      <div className="header-container">
-        <div className="left section">
-          <div className="home">
+      <div className="zzz header-container">
+        <div className="zzz left section">
+          <div className="zzz home">
             <Link to="/">Home</Link>
           </div>
         </div>
-        <div className="right section">
+        <div className="zzz right section">
           <RightHeaderGroup />
         </div>
       </div>

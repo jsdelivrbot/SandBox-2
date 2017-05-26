@@ -6,21 +6,18 @@ import './style.css'
 class IndexPage extends React.Component {
   render() {
     return (
-      <div className="app-container">
-        <div className="app-sub-container">
-          <div className="index-sidebar">
-            <div className="index-title">
+      <div className="zzz app-container">
+        <div className="zzz app-sub-container">
+          <div className="zzz index-sidebar">
+            <div className="zzz index-title">
               Index
             </div>
-            <div className="index-tab">
+            <div className="zzz index-tab">
               <Link to="/sections/1">Section One</Link>
             </div>
-            <div className="index-tab">
+            <div className="zzz index-tab">
               <Link to="/sections/2">Section Two</Link>
             </div>
-          </div>
-          <div className="content-body">
-            content here
           </div>
         </div>
       </div>

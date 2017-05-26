@@ -1,4 +1,12 @@
 .app-body {
   display: flex;
-  flex-direction: column;
+  margin: 50px;
+}
+
+.index-container {
+  flex: 1;
+}
+
+.content-container {
+  flex: 4;
 }

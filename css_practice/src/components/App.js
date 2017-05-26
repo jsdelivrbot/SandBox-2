@@ -1,15 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import AppHeader from './AppHeader'
-
+import IndexPage from './IndexPage'
 import './style.css'
 
 export default ({ children }) => {
   return (
-    <div className="container">
+    <div className="zzz container">
       <AppHeader />
-      <div className="app-body">
-        {children}
+      <div className="zzz app-body">
+        <div className="zzz index-container">
+          <IndexPage />
+        </div>
+        <div className="zzz content-container">
+          {children}
+        </div>
       </div>
     </div>
   )
