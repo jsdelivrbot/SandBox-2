@@ -16,7 +16,7 @@ const RightHeaderGroup = () => {
       />
       <a
         className="zzz header-button portfolio"
-        href="https://www.tom-ogasawara.com"
+        href="http://www.tom-ogasawara.com"
       />
       <a
         className="zzz header-button email"

@@ -9,4 +9,5 @@
 
 .content-container {
   flex: 4;
+  height: 100%;
 }
