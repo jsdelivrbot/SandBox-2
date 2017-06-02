@@ -8,6 +8,10 @@ body {
   border: 1px solid red;
 }
 
+.pate-title {
+  
+}
+
 .page-content {
   height: calc(100vh - 200px);
   overflow: scroll;
