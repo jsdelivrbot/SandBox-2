@@ -11,3 +11,19 @@
   flex: 4;
   height: 100%;
 }
+
+.header-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.header-icon {
+  color: #eee;
+}

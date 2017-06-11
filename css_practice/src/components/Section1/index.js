@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class SectionOne extends React.Component {
   render() {
@@ -161,8 +161,8 @@ class SectionOne extends React.Component {
 
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SectionOne
+export default SectionOne;
