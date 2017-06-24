@@ -1,7 +1,40 @@
 .app-container {
   display: flex;
   flex-direction: column;
+  margin-top: 85px;
+}
+
+.index-tab-container {
+  height: 50px;
 }
 
 .index-tab {
+  position: absolute;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  transition: 0.5s ease-in;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background: red;
+}
+
+.index-tab:hover {
+  transform: translateX(-100px);
+}
+
+.index-tab-number {
+  display: flex;
+  width: 50px;
+  height: 100%;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-tab-title {
+  display: flex;
+  align-items: center;
 }

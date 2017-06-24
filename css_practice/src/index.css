@@ -5,11 +5,11 @@ body {
 }
 
 .zzz {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 
 .page-title {
-  
+  font-size: 40px;
 }
 
 .page-content {

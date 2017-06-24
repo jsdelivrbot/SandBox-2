@@ -1,6 +1,6 @@
 .app-body {
   display: flex;
-  margin: 50px 200px;
+  margin: 50px 300px;
 }
 
 .index-container {
@@ -8,7 +8,7 @@
 }
 
 .content-container {
-  flex: 4;
+  flex: 11;
   height: 100%;
 }
 
