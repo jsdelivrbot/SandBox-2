@@ -18,13 +18,13 @@
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  background: red;
+  /*background: red;*/
 }
 
 .index-tab:hover {
   transform: translateX(-100px);
 }
-
+/*
 .index-tab-number {
   display: flex;
   width: 50px;
@@ -37,4 +37,4 @@
 .index-tab-title {
   display: flex;
   align-items: center;
-}
+}*/
