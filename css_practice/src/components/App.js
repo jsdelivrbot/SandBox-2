@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React from 'react';
+import { Link } from 'react-router';
 
-import AppHeader from './AppHeader'
-import IndexMenu from './IndexMenu'
-import './style.css'
+import AppHeader from './AppHeader';
+import IndexMenu from './IndexMenu';
+import './style.css';
 
 export default ({ children }) => {
   return (
@@ -18,5 +18,5 @@ export default ({ children }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

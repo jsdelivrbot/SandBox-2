@@ -7,7 +7,7 @@ class IndexMenu extends React.Component {
   renderLinks(links) {
     return links.map((link, i) => {
       return (
-        <div className="zzz index-tab-container">
+        <div className="zzz index-tab-container" key={i}>
           <Link to={`/sections/${link.id}`} className="index-tab">
             <div className="index-tab-number">{link.id}</div>
             <div className="index-tab-title">

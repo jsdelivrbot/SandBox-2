@@ -6,6 +6,7 @@
 
 .index-tab-container {
   height: 50px;
+  margin: 5px;
 }
 
 .index-tab {
@@ -13,18 +14,18 @@
   display: flex;
   height: 50px;
   width: 200px;
-  border-radius: 25px;
-  transition: 0.5s ease-in;
+  /*border-radius: 25px;*/
+  transition: 0.5s ease-out;
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  /*background: red;*/
+  background: white;
 }
 
 .index-tab:hover {
   transform: translateX(-100px);
 }
-/*
+
 .index-tab-number {
   display: flex;
   width: 50px;
@@ -37,4 +38,4 @@
 .index-tab-title {
   display: flex;
   align-items: center;
-}*/
+}

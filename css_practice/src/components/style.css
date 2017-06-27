@@ -1,6 +1,10 @@
+/*.container {
+}*/
+
 .app-body {
   display: flex;
-  margin: 50px 300px;
+  width: 70%;
+  margin: 50px 15vw;
 }
 
 .index-container {
@@ -10,6 +14,7 @@
 .content-container {
   flex: 11;
   height: 100%;
+  z-index: 2;
 }
 
 .header-button {

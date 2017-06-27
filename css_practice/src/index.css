@@ -2,17 +2,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #eee;
 }
 
 .zzz {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .page-title {
   font-size: 40px;
+  margin-left: 40px;
+  font-weight: bold;
 }
 
 .page-content {
   height: calc(100vh - 200px);
   overflow: scroll;
+  background: white;
 }
