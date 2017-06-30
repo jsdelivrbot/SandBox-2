@@ -35,17 +35,19 @@
 
 .paul {
   position: absolute;
-  height: 100px;
-  width: 70px;
+  height: 66px;
+  width: 47px;
   z-index: -1;
-  background: red;
+  /*background: red;*/
   right: 25%;
-  bottom: 40px;
+  bottom: 45px;
   transform: rotateZ(-10deg);
   transition: 1s ease-out;
+  background-image: url("../Assets/paul.png");
+  background-size: cover;
 }
 
 .paul:hover {
-  bottom: 10px;
+  bottom: 5px;
   transform: rotateZ(0deg);
 }
