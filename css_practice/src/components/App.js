@@ -15,6 +15,7 @@ export default ({ children }) => {
         </div>
         <div className="zzz content-container">
           {children}
+          <a href="http://www.tom_ogasawara.com/paul" className="paul" />
         </div>
       </div>
     </div>

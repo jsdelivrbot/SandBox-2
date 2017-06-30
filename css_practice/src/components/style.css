@@ -32,3 +32,20 @@
 .header-icon {
   color: #eee;
 }
+
+.paul {
+  position: absolute;
+  height: 100px;
+  width: 70px;
+  z-index: -1;
+  background: red;
+  right: 25%;
+  bottom: 40px;
+  transform: rotateZ(-10deg);
+  transition: 1s ease-out;
+}
+
+.paul:hover {
+  bottom: 10px;
+  transform: rotateZ(0deg);
+}

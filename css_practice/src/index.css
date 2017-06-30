@@ -18,7 +18,7 @@ body {
 .page-content {
   height: calc(100vh - 300px);
   min-height: 350px;
-  overflow: scroll;
+  overflow: auto;
   background: white;
   padding: 50px;
 }
