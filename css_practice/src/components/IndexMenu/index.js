@@ -31,9 +31,7 @@ class IndexMenu extends React.Component {
 
     return (
       <div className="zzz app-container">
-        <div className="zzz index-title">
-          Index
-        </div>
+        
         {this.renderLinks(links)}
       </div>
     );
