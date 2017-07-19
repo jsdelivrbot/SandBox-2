@@ -9,7 +9,7 @@ class IndexMenu extends Component {
       return (
         <div className="zzz index-tab-container" key={i}>
           <Link to={`/sections/${link.id}`} className="index-tab">
-            <div className="index-tab-number">{link.id}</div>
+            <i className={`fa ${link.icon}`} aria-hidden="true"></i>
             <div className="index-tab-title">
               {link.title}
             </div>
@@ -19,16 +19,14 @@ class IndexMenu extends Component {
     });
   }
 
-  //  TODO: figure out tab contents
-
   render() {
     const links = [
-      { id: 1, title: 'About Me' },
-      { id: 2, title: 'Projects' },
-      { id: 3, title: '????' },
-      { id: 4, title: 'Resume' },
-      { id: 5, title: 'Interests' },
-      { id: 6, title: '' }
+      { id: 1, title: 'About Me', icon: "fa-user" },
+      { id: 2, title: 'Projects', icon: "fa-folder-open" },
+      { id: 3, title: 'CSS3', icon: "fa-css3" },
+      { id: 4, title: 'Skills', icon: "fa-wrench" },
+      { id: 5, title: 'Resume', icon: "fa-file-text" },
+      { id: 6, title: 'Contact', icon: "fa-envelope" }
     ];
 
     return (
@@ -37,6 +35,6 @@ class IndexMenu extends Component {
       </div>
     );
   }
-}
+};
 
 export default IndexMenu;
