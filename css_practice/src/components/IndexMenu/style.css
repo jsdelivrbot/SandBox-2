@@ -30,7 +30,7 @@
     transition: 0.5s ease-in-out;
 
   transform: translateX(-100px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   box-shadow: 0 2px 5px rgba(0,0,0,0.08), 0 5px 5px rgba(0,0,0,0.12); 
 }
 
 .index-tab-number {

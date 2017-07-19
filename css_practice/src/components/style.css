@@ -5,7 +5,7 @@
 .app-body {
   display: flex;
   width: 70%;
-  margin: 50px 15vw;
+  margin: 0 15vw;
 }
 
 .index-container {
@@ -43,8 +43,8 @@
   right: 25%;
   bottom: 45px;
   transform: rotateZ(-10deg);
-  transition: bottom 0.5s ease-out, transform 0.5s ease-out;
-  background-image: url("../Assets/paul.png");
+  transition: bottom 0.5s ease-out, transform 0.5s ease-in-out;
+  background-image: url("../Assets/images/paul.png");
   background-size: cover;
 }
 

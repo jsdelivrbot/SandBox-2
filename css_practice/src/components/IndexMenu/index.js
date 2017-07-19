@@ -21,12 +21,12 @@ class IndexMenu extends React.Component {
 
   render() {
     const links = [
-      { id: 1, title: 'Menus' },
-      { id: 2, title: '' },
-      { id: 3, title: '' },
-      { id: 4, title: '' },
-      { id: 5, title: '' },
-      { id: 6, title: '' }
+      { id: 1, title: 'About Me' },
+      { id: 2, title: 'Projects' },
+      { id: 3, title: 'Resume' },
+      { id: 4, title: 'Climbing' },
+      { id: 5, title: 'CSS Elements' },
+      { id: 6, title: 'Resume' }
     ];
 
     return (
