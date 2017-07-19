@@ -3,26 +3,26 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import App from './components/App';
-import WelcomePage from './components/WelcomePage';
-import SectionOne from './components/Section1';
-import SectionTwo from './components/Section2';
-import SectionThree from './components/Section3';
-import SectionFour from './components/Section4';
-import SectionFive from './components/Section5';
-import SectionSix from './components/Section6';
+// import WelcomePage from './components/WelcomePage';
+import AboutMe from './components/IndexTabs/AboutMe';
+import Projects from './components/IndexTabs/Projects';
+import CSS3 from './components/IndexTabs/CSS';
+import Skills from './components/IndexTabs/Skills';
+import Resume from './components/IndexTabs/Resume';
+import Contact from './components/IndexTabs/Contact';
 import './index.css';
 
 const Root = () => {
   return (
     <Router history={browserHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={WelcomePage} />
-        <Route path="sections/1" component={SectionOne} />
-        <Route path="sections/2" component={SectionTwo} />
-        <Route path="sections/3" component={SectionThree} />
-        <Route path="sections/4" component={SectionFour} />
-        <Route path="sections/5" component={SectionFive} />
-        <Route path="sections/6" component={SectionSix} />
+        <IndexRoute component={AboutMe} />
+        <Route path="about" component={AboutMe} />
+        <Route path="projects" component={Projects} />
+        <Route path="css3" component={CSS3} />
+        <Route path="skills" component={Skills} />
+        <Route path="resume" component={Resume} />
+        <Route path="contact" component={Contact} />
       </Route>
     </Router>
   );

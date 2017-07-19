@@ -4,14 +4,14 @@ import { Link } from 'react-router';
 import './style.css';
 
 class IndexMenu extends Component {
-  renderLinks(links) {
-    return links.map((link, i) => {
+  renderLinks(pages) {
+    return pages.map((page, i) => {
       return (
         <div className="zzz index-tab-container" key={i}>
-          <Link to={`/sections/${link.id}`} className="index-tab">
-            <i className={`fa ${link.icon}`} aria-hidden="true"></i>
+          <Link to={page.link} className="index-tab">
+            <i className={`fa ${page.icon}`} aria-hidden="true" />
             <div className="index-tab-title">
-              {link.title}
+              {page.title}
             </div>
           </Link>
         </div>
@@ -20,21 +20,21 @@ class IndexMenu extends Component {
   }
 
   render() {
-    const links = [
-      { id: 1, title: 'About Me', icon: "fa-user" },
-      { id: 2, title: 'Projects', icon: "fa-folder-open" },
-      { id: 3, title: 'CSS3', icon: "fa-css3" },
-      { id: 4, title: 'Skills', icon: "fa-wrench" },
-      { id: 5, title: 'Resume', icon: "fa-file-text" },
-      { id: 6, title: 'Contact', icon: "fa-envelope" }
+    const pages = [
+      { id: 1, title: 'About Me', icon: 'fa-user', link: 'about' },
+      { id: 2, title: 'Projects', icon: 'fa-folder-open', link: 'projects' },
+      { id: 3, title: 'CSS3', icon: 'fa-css3', link: 'css3' },
+      { id: 4, title: 'Skills', icon: 'fa-wrench', link: 'skills' },
+      { id: 5, title: 'Resume', icon: 'fa-file-text', link: 'resume' },
+      { id: 6, title: 'Contact', icon: 'fa-envelope', link: 'contact' }
     ];
 
     return (
       <div className="zzz app-container">
-        {this.renderLinks(links)}
+        {this.renderLinks(pages)}
       </div>
     );
   }
-};
+}
 
 export default IndexMenu;
