@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import './style.css';
 
 class SectionFour extends React.Component {
   render() {
@@ -8,11 +10,11 @@ class SectionFour extends React.Component {
           Section Four Title
         </div>
         <div className="zzz page-content">
-          Section four content goes here
+          <div className="resume"/>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SectionFour
+export default SectionFour;

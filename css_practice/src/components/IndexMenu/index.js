@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import './style.css';
 
-class IndexMenu extends React.Component {
+class IndexMenu extends Component {
   renderLinks(links) {
     return links.map((link, i) => {
       return (
@@ -19,14 +19,16 @@ class IndexMenu extends React.Component {
     });
   }
 
+  //  TODO: figure out tab contents
+
   render() {
     const links = [
       { id: 1, title: 'About Me' },
       { id: 2, title: 'Projects' },
-      { id: 3, title: 'Resume' },
-      { id: 4, title: 'Climbing' },
-      { id: 5, title: 'CSS Elements' },
-      { id: 6, title: 'Resume' }
+      { id: 3, title: '????' },
+      { id: 4, title: 'Resume' },
+      { id: 5, title: 'Interests' },
+      { id: 6, title: '' }
     ];
 
     return (

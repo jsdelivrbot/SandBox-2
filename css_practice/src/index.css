@@ -4,7 +4,11 @@ body {
   font-family: sans-serif;
   /*background: #eee;
   color: #333;*/
-  background: lightblue;
+
+  /* TODO: figure out a good background color  */
+  background: #46aaf2; 
+  /* background-image: url("./Assets/images/khaosok.jpg");
+  background-size: cover; */
   color: white;
 }
 
