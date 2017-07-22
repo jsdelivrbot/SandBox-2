@@ -8,7 +8,7 @@ class AppHeader extends Component {
   render() {
     return (
       <div className="zzz header-container">
-        <div className="zzz left section">
+        {/* <div className="zzz left section">
           <div className="zzz home-button">
             <Link to="/">
             <div className="header-button">
@@ -19,7 +19,7 @@ class AppHeader extends Component {
         </div>
         <div className="zzz right section">
           <RightHeaderGroup />
-        </div>
+        </div> */}
       </div>
     );
   }

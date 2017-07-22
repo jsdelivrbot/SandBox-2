@@ -1,18 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-class SectionFive extends React.Component {
+class Resume extends React.Component {
   render() {
     return (
       <div>
         <div className="zzz page-title">
-          Section Five Title
+          Resume
         </div>
         <div className="zzz page-content">
           Section five content goes here
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default SectionFive
+export default Resume;

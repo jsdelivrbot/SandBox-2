@@ -1,7 +1,11 @@
 .resume {
-  /* height: 100%; */
+  height: 100%; 
   width: 100%;
   background-image: url("../../../Assets/images/TomOgasawaraResume.png");
   background-size: 100%;
   overflow: auto;
+}
+
+.skills-container {
+  
 }

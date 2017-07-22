@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-class SectionOne extends React.Component {
+class AboutMe extends React.Component {
   renderMenus() {
     const iterators = [1, 2, 3, 4];
     return (
@@ -30,14 +30,37 @@ class SectionOne extends React.Component {
     return (
       <div>
         <div className="zzz page-title">
-          Drop Down Menus
+          About Me
         </div>
         <div className="zzz page-content">
-          {this.renderMenus()}
+          <div className="about">
+            <div className="profile-pic"></div>
+            <p className="about-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a voluptates 
+              labore ad nam facere reiciendis error perferendis, quae, magni, harum ipsum 
+              ipsam quasi dolor voluptas! Consequatur, veritatis? Repudiandae, nihil.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a voluptates 
+              labore ad nam facere reiciendis error perferendis, quae, magni, harum ipsum 
+              ipsam quasi dolor voluptas! Consequatur, veritatis? Repudiandae, nihil.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a voluptates 
+              labore ad nam facere reiciendis error perferendis, quae, magni, harum ipsum 
+              ipsam quasi dolor voluptas! Consequatur, veritatis? Repudiandae, nihil.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint a voluptates 
+              labore ad nam facere reiciendis error perferendis, quae, magni, harum ipsum 
+              ipsam quasi dolor voluptas! Consequatur, veritatis? Repudiandae, nihil.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat debitis 
+              molestias voluptates velit enim veniam architecto, aut temporibus eligendi 
+              dolorem at inventore dolor perspiciatis labore alias neque necessitatibus.
+              Laudantium, amet? Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              Tenetur unde possimus non repellendus a eaque, dolorem enim nemo excepturi 
+              sunt eum rerum magnam accusantium similique hic facilis voluptatibus! Totam, 
+              quis.
+            </p>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default SectionOne;
+export default AboutMe;

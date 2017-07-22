@@ -20,7 +20,7 @@ nav > ul > li {
   text-transform: uppercase;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 nav > ul > li:hover {
@@ -55,4 +55,15 @@ ul.drop-menu li {
 
 li:hover > ul.drop-menu li {
   display: block;
+}
+
+.profile-pic {
+  height: 300px;
+  width: 200px;
+  background-image: url("../../../Assets/images/profile_pic.png");
+  background-size: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+  border-radius: 5px;
+  float: right;
+  margin: 0 0 20px 20px;
 }

@@ -1,19 +1,18 @@
-import React from 'react';
-
-class SectionThree extends React.Component {
-
+import React, { Component } from 'react';
+import './style.css';
+class Css extends Component {
   render() {
     return (
       <div>
         <div className="zzz page-title">
-          Section three Title
+          CSS3 Elements
         </div>
         <div className="zzz page-content">
-          Section three content goes here
+          
         </div>
       </div>
     );
   }
 }
 
-export default SectionThree;
+export default Css;
