@@ -1,57 +1,98 @@
-// const readTextFile = file => {
-//   var rawFile = new XMLHttpRequest();
-//   rawFile.open('GET', file, false);
-//   rawFile.onreadystatechange = function() {
-//     if (rawFile.readyState === 4) {
-//       if (rawFile.status === 200 || rawFile.status == 0) {
-//         var allText = rawFile.responseText;
-//         alert(allText);
-//       }
-//     }
-//   };
-//   rawFile.send(null);
-// };
+const fs = require('fs');
 
-let N = 5;
-let K = 3;
-let arr = [188930, 194123, 201345, 154243, 154243];
+// Read in a text file titled 'input.txt'
+// IMPORTANT: The input file must be in the same directory as this file
+const readFile = () => {
+  fs.readFile('input.txt', 'utf8', function(err, data) {
+    if (err) {
+      return console.log(err);
+    }
 
-// console.log('N: ', N);
-// console.log('K: ', K);
-// console.log('arr: ', arr);
+    // Find the number of days and window size
+    const N = parseInt(data[0]);
+    const K = parseInt(data[2]);
+    let arr = [];
+    let tempString = '';
 
-let subArrs = [];
-let counter = 0;
-
-for (let i = 0; i < N; i++) {
-  let tempArr = arr.slice(i, i + K);
-  if (tempArr.length === K) {
-    subArrs.push(tempArr);
-  }
-}
-
-for (let i = 0; i < subArrs.length; i++) {
-  let subSubArr = [];
-  for (let start = 0; start < subArrs[i].length; start++) {
-    for (let length = 0; start + length <= subArrs[i].length; length++) {
-      let tempArr = subArrs[i].slice(start, start + length);
-      if (tempArr.length > 1) {
-        subSubArr.push(tempArr);
+    // Construct the array of home values
+    for (let i = 4; i <= data.length; i++) {
+      if (data[i] === ' ' || i === data.length) {
+        arr.push(parseInt(tempString));
+        tempString = '';
       }
+      tempString += data[i];
+    }
+
+    // Call the function to find subranges within the home value array
+    findRanges(N, K, arr);
+  });
+};
+
+const findRanges = (N, K, arr) => {
+  let validinputs = true;
+
+  // Check whether the input text tile is formatted correctly
+  if (N > 200000 || N < 1) {
+    validinputs = false;
+    console.log('Please enter a valid number of days N where 1 ≤ N ≤ 200,000');
+  }
+  if (K > N || K < 1) {
+    validinputs = false;
+    console.log('Please enter a valid window size K where 1 ≤ K ≤ N days');
+  }
+  if (N !== arr.length) {
+    validinputs = false;
+    console.log('Please enter a valid list of average home values with length N');
+  }
+
+  let subArrs = [];
+  for (let i = 0; i < N; i++) {
+    let tempArr = arr.slice(i, i + K);
+    if (tempArr.length === K) {
+      subArrs.push(tempArr);
     }
   }
-  console.log('i: ', i);
-  console.log('subArrs[i]: ', subArrs[i]);
-  console.log('subSubArr: ', subSubArr);
-  
-}
+  for (let i = 0; i < subArrs.length; i++) {
+    let counter = 0;
+    let subranges = [];
+    for (let start = 0; start < subArrs[i].length; start++) {
+      for (let length = 0; start + length <= subArrs[i].length; length++) {
+        let tempArr = subArrs[i].slice(start, start + length);
+        if (tempArr.length > 1) {
+          subranges.push(tempArr);
+        }
+      }
+    }
+    for (let j = 0; j < subranges.length; j++) {
+      let increasing = true;
+      let decreasing = true;
+      for (let k = 1; k < subranges[j].length; k++) {
+        if (subranges[j][k] < subranges[j][k - 1]) {
+          increasing = false;
+        } else if (subranges[j][k] > subranges[j][k - 1]) {
+          decreasing = false;
+        } else if (subranges[j][k] === subranges[j][k - 1]) {
+          decreasing = false;
+          increasing = false;
+        }
+      }
+      if (increasing) {
+        counter++;
+      } else if (decreasing) {
+        counter--;
+      }
+    }
+    if (validinputs) {
+      console.log(counter);
+    }
+  }
+}; 
 
-// console.log('subArrs: ', subArrs);
-// function uniqueSubstrings(string) {
-//   let resultA = [];
-//   for (let start = 0; start < string.length; start++) {
-//     for (let leng = 1; leng + start <= string.length; leng++) {
-//       resultA.push(string.slice(start, start + leng));
-//     }
-//   }
-// }
+readFile();
+const a = 200000;
+const b = 20;
+let c = [];
+for (let i = 0; i < 200001; i++) {
+  c.push(Math.floor(Math.random() * 1000000));
+}
+findRanges(a, b, c);
