@@ -42,9 +42,19 @@ const findRanges = (N, K, arr) => {
   }
   if (N !== arr.length) {
     validinputs = false;
-    console.log('Please enter a valid list of average home values with length N');
+    console.log(
+      'Please enter a valid list of average home values with length N'
+    );
   }
-
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100000) {
+      validinputs = false;
+      console.log(
+        'Please enter a valid list of average home values each under 1,000,000'
+      );
+    }
+  } 
+  
   // Find the windows within the array to examine
   let subArrs = [];
   for (let i = 0; i < N; i++) {
@@ -52,8 +62,8 @@ const findRanges = (N, K, arr) => {
     if (tempArr.length === K) {
       subArrs.push(tempArr);
     }
-  }
-
+  } 
+  
   // Find the subranges within the windows to examine
   for (let i = 0; i < subArrs.length; i++) {
     let counter = 0;
@@ -65,8 +75,8 @@ const findRanges = (N, K, arr) => {
           subranges.push(tempArr);
         }
       }
-    }
-
+    } 
+    
     // Check whether the subranges are increasing, decreasing, or neither
     for (let j = 0; j < subranges.length; j++) {
       let increasing = true;
@@ -86,20 +96,14 @@ const findRanges = (N, K, arr) => {
       } else if (decreasing) {
         counter--;
       }
-    }
-
+    } 
+    
     // Print the result to the console
     if (validinputs) {
       console.log(counter);
     }
   }
-}; 
+};
 
 readFile();
-// const a = 200000;
-// const b = 20;
-// let c = [];
-// for (let i = 0; i < 200001; i++) {
-//   c.push(Math.floor(Math.random() * 1000000));
-// }
-// findRanges(a, b, c);
+ // const a = 200000; // const b = 20; // let c = []; // for (let i = 0; i < 200001; i++) { //   c.push(Math.floor(Math.random() * 1000000)); // } // findRanges(a, b, c);
