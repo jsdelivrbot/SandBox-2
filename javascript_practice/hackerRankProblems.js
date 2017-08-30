@@ -98,4 +98,4 @@ function timeConversion(s) {
   return answer
 }
 console.log(timeConversion('05:05:45AM'));
-console.log(timeConversion('12:05:39AM'))
+console.log(timeConversion('12:05:39AM'))Node

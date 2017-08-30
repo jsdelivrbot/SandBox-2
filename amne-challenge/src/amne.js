@@ -29,29 +29,31 @@ const readFile = () => {
 };
 
 const findRanges = (N, K, arr) => {
-  let errorMessage = null;
+  let errorMessages = [];
 
   // Check whether the input text tile is formatted correctly
   if (N > 200000 || N < 1) {
-    errorMessage = 
-      'Please enter a valid number of days N where 1 ≤ N ≤ 200,000';
+    errorMessages.push( 
+      'Please enter a valid number of days N where 1 ≤ N ≤ 200,000');
   }
   if (K > N || K < 1) {
-    errorMessage = 
-      'Please enter a valid window size K where 1 ≤ K ≤ N days';
+    errorMessages.push(  
+      'Please enter a valid window size K where 1 ≤ K ≤ N days');
   }
   if (N !== arr.length) {
-    errorMessage =
-      'Please enter a valid list of average home values with length N';
+    errorMessages.push( 
+      'Please enter a valid list of average home values with length N');
   }
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 1000000) {
-      errorMessage =
-        'Please enter a valid list of average home values each under 1,000,000';
+      errorMessages.push( 
+        'Please enter a valid list of average home values each under 1,000,000');
     }
   }
-  if (errorMessage) {
-    console.log(errorMessage);
+
+  // Print out any error messages
+  for (let i = 0; i < errorMessages.length; i++) {
+    console.log(errorMessages[i]);
   }
 
   
@@ -99,7 +101,7 @@ const findRanges = (N, K, arr) => {
     } 
     
     // Print the result to the console
-    if (!errorMessage) {
+    if (errorMessages.length === 0) {
       console.log(counter);
     }
   }
