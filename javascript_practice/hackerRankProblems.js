@@ -79,23 +79,23 @@ let arr = [
 //   let seqList = [];
 //   for (var index = 0; index < array.length; index++) {
 //     var element = array[index];
-    
+
 //   }
 // }
 
 function timeConversion(s) {
-  let answer = ''
-  let hours = parseInt(s[0]) * 10 + parseInt(s[1])
+  let answer = '';
+  let hours = parseInt(s[0]) * 10 + parseInt(s[1]);
   if (s[8] === 'P') {
-    hours = hours === 24 ? '00' : hours.toString()
-    answer += hours
-    answer += s.slice(2, -2)
+    hours = hours === 24 ? '00' : hours.toString();
+    answer += hours;
+    answer += s.slice(2, -2);
   } else {
-    hours = hours === 12 ? '00' : hours.toString()
-    answer += hours
-    answer += s.slice(2, -2)
+    hours = hours === 12 ? '00' : hours.toString();
+    answer += hours;
+    answer += s.slice(2, -2);
   }
-  return answer
+  return answer;
 }
 console.log(timeConversion('05:05:45AM'));
-console.log(timeConversion('12:05:39AM'))Node
+console.log(timeConversion('12:05:39AM'));
