@@ -83,19 +83,19 @@ let arr = [
 //   }
 // }
 
-function timeConversion(s) {
-  let answer = '';
-  let hours = parseInt(s[0]) * 10 + parseInt(s[1]);
-  if (s[8] === 'P') {
-    hours = hours === 24 ? '00' : hours.toString();
-    answer += hours;
-    answer += s.slice(2, -2);
-  } else {
-    hours = hours === 12 ? '00' : hours.toString();
-    answer += hours;
-    answer += s.slice(2, -2);
-  }
-  return answer;
-}
-console.log(timeConversion('05:05:45AM'));
-console.log(timeConversion('12:05:39AM'));
+// function timeConversion(s) {
+//   let answer = '';
+//   let hours = parseInt(s[0]) * 10 + parseInt(s[1]);
+//   if (s[8] === 'P') {
+//     hours = hours === 24 ? '00' : hours.toString();
+//     answer += hours;
+//     answer += s.slice(2, -2);
+//   } else {
+//     hours = hours === 12 ? '00' : hours.toString();
+//     answer += hours;
+//     answer += s.slice(2, -2);
+//   }
+//   return answer;
+// }
+// console.log(timeConversion('05:05:45AM'));
+// console.log(timeConversion('12:05:39AM'));
