@@ -24,7 +24,7 @@ chrome.contextMenus.onClicked.addListener(function(clickData) {
         }
 
         newTotal += parseInt(clickData.selectionText);
-        chrome.storage.sync.set({ total: newTotal }, function() {
+        chrome.storage.sync.set({ 'total': newTotal }, function() {
           if (newTotal >= budget.limit) {
             var notifOptions = {
               type: 'basic',
