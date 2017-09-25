@@ -1,9 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 h1, h2 {
-  color: green;
+  color: #069111;
 }
 
 h1 {
@@ -14,7 +15,10 @@ h2 {
   font-size: 25px;
 }
 
-p {
-  font-size: 14px;
+.main-text {
   text-align: justify;
+}
+
+#author-text {
+  font-size: 22px;
 }
