@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Text,
-  TextInput,
-  View,
-  StyleSheet,
-  ScrollView
-} from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 import ProductDetailList from './ProductDetailList';
 
 export default class SearchBar extends Component {
@@ -39,7 +32,6 @@ export default class SearchBar extends Component {
     })
       .then(response => response.json())
       .then(responseJson => {
-        console.log('responseJson: ', responseJson.data);
         this.setState({
           searchResults: responseJson.data
         });
@@ -59,4 +51,3 @@ export default class SearchBar extends Component {
     );
   }
 }
-

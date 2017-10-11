@@ -40,11 +40,18 @@ export default class ProductDetail extends Component {
                 source={{ uri: item.image_url_main }}
                 style={{ width: 200, height: 300 }}
               />
-              <Text style={styles.itemTitle}>{item.itemName}</Text>
-              <Text style={styles.description}>{item.brand}</Text>
-              <Text style={styles.description}>{item.seller}</Text>
-              <Text style={styles.description}>{item.description}</Text>
-              <Text style={styles.price}>${item.price}</Text>
+              <Text style={styles.itemTitle}>
+                {item.itemName ? item.itemName : 'Unknown item'}
+              </Text>
+              <Text style={styles.description}>
+                {item.brand ? item.brand : 'No brand found'}
+              </Text>
+              <Text style={styles.description}>
+                {item.description ? item.description : 'No description found'}
+              </Text>
+              <Text style={styles.price}>
+                ${item.price ? item.price : 'No price found'}
+              </Text>
               <TouchableHighlight
                 onPress={() => {
                   this.toggleModal(!this.state.modalVisible)
@@ -70,7 +77,7 @@ export default class ProductDetail extends Component {
 
 const styles = StyleSheet.create({
   descriptionContainer: {
-    marginBottom: 40,
+    marginBottom: 40
   },
   description: {
     color: '#fff',
