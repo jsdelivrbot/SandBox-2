@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20
+    marginTop: 50
   },
   headerText: {
     color: '#fff',
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
   logo: {
     height: 80,
     width: 80,
-    marginTop: 50
+    margin: 20,
   }
 });
