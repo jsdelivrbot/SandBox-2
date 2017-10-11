@@ -53,19 +53,10 @@ export default class SearchBar extends Component {
     const data = this.state.searchResults;
 
     return (
-      <View style={{ padding: 10 }}>
-        <Text style={{ padding: 10, fontSize: 42 }} />
+      <View>
         <ProductDetailList data={data} />
       </View>
     );
   }
 }
-const styles = StyleSheet.create({
-  searchBar: {
-    height: 40,
-    padding: 20,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#333'
-  }
-});
+

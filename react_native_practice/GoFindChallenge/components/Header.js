@@ -19,17 +19,18 @@ const styles = StyleSheet.create({
   header: {
     width: '100%',
     justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 50
+    margin: 20
   },
   headerText: {
     color: '#fff',
-    fontSize: 50,
+    fontSize: 45,
     fontWeight: 'bold'
   },
   logo: {
-    height: 80,
-    width: 80,
-    margin: 20,
+    height: 60,
+    width: 60,
+    margin: 10,
   }
 });

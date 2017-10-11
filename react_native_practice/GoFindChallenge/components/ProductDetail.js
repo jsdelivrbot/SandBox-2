@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  ScrollView,
   Image,
   TouchableHighlight,
   Modal
@@ -11,16 +10,15 @@ import {
 
 export default class ProductDetail extends Component {
   state = { modalVisible: false }
-
   toggleModal(visible) {
     this.setState({ modalVisible: visible })
   }
 
   render() {
     const item = this.props.item
-    
+
     return (
-      <View>
+      <View style={{ padding: 20 }}>
         <Image
           source={{ uri: item.image_url_main }}
           style={{ width: '100%', height: 600 }}
@@ -44,15 +42,15 @@ export default class ProductDetail extends Component {
               />
               <Text style={styles.itemTitle}>{item.itemName}</Text>
               <Text style={styles.description}>{item.brand}</Text>
-              <Text style={styles.description}>{item.brand}</Text>
-              <Text style={styles.description}>{item.brand}</Text>
-              <Text style={styles.description}>{item.brand}</Text>
+              <Text style={styles.description}>{item.seller}</Text>
+              <Text style={styles.description}>{item.description}</Text>
+              <Text style={styles.price}>${item.price}</Text>
               <TouchableHighlight
                 onPress={() => {
                   this.toggleModal(!this.state.modalVisible)
                 }}
               >
-                <Text>Back</Text>
+                <Text style={styles.link}>Back</Text>
               </TouchableHighlight>
             </View>
           </Modal>
@@ -62,7 +60,7 @@ export default class ProductDetail extends Component {
               this.toggleModal(true)
             }}
           >
-            <Text>View Details</Text>
+            <Text style={styles.link}>View Details</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -71,18 +69,18 @@ export default class ProductDetail extends Component {
 }
 
 const styles = StyleSheet.create({
-  dataContainer: {
-    width: '100%',
-    padding: 10
-  },
   descriptionContainer: {
-    marginBottom: 50
+    marginBottom: 40,
   },
   description: {
     color: '#fff',
     fontSize: 20,
-    marginBottom: 5
-    // marginLeft: 20
+    marginTop: 5
+  },
+  price: {
+    color: '#fff',
+    fontSize: 30,
+    marginTop: 10
   },
   modal: {
     height: '100%',
@@ -94,6 +92,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     color: '#fff',
+    marginTop: 10
+  },
+  link: {
+    color: '#605E5E',
     marginTop: 10
   }
 })
