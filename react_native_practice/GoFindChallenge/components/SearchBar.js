@@ -5,22 +5,22 @@ import {
   TextInput,
   View,
   StyleSheet,
-  Button,
   ScrollView
 } from 'react-native';
-import ProductDetail from './ProductDetail';
-// ADD REQUEST => 'yarn add request'
-// import request from 'request';
+import ProductDetailList from './ProductDetailList';
 
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: '',
       searchResults: []
     };
 
     this.search = this.search.bind(this);
+  }
+
+  componentDidMount() {
+    this.search();
   }
 
   search() {
@@ -49,37 +49,13 @@ export default class SearchBar extends Component {
       });
   }
 
-  renderImages() {
+  render() {
     const data = this.state.searchResults;
 
     return (
-      // <ScrollView>
-      //   {images.map(image => {
-      //     console.log('image.brand: ', image.brand);
-      //     return (
-      //       <Text>
-      //         {image.brand}
-      //       </Text>
-      //     );
-      //   })}
-      // </ScrollView>
-      <ProductDetail data={data}></ProductDetail>
-    );
-  }
-
-  render() {
-    return (
       <View style={{ padding: 10 }}>
-        {/* <TextInput
-          style={styles.searchBar}
-          placeholder="Enter an image url"
-          onChangeText={searchTerm => this.setState({ searchTerm })}
-        /> */}
         <Text style={{ padding: 10, fontSize: 42 }} />
-        <Button onPress={() => this.search()} title="Search" color="#fff" />
-        <View>
-          {this.renderImages()}
-        </View>
+        <ProductDetailList data={data} />
       </View>
     );
   }
@@ -91,11 +67,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 5,
     color: '#333'
-  },
-  button: {
-    color: '#333',
-    backgroundColor: '#fff',
-    display: 'none',
-    height: 100
   }
 });
